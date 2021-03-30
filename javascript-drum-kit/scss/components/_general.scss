@@ -1,0 +1,40 @@
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: $font, $family;
+  font-size: $browser-context;
+  color: $primary-text;
+}
+html {
+  background: no-repeat, url("../images/sawyer-bengtson-unsplash.jpg") center center fixed;
+  background-size: cover;
+}
+body {
+  background-color: #000000db;
+}
+a { 
+  &, &:link {
+    color:$links-color;
+    text-decoration: none;
+  }
+  &:focus { border: none; }
+}
+
+button:focus {
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin:0 auto;
+}

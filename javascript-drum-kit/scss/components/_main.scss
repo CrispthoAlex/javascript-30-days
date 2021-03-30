@@ -1,0 +1,94 @@
+/*Main Content styles*/
+
+.main-content {
+    width: 100%;
+    padding: 3% 0;
+}
+
+.overview {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 35px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #{$background-orange}52;
+    padding: 15px;
+    border-radius: 35px;
+    
+    &::before {
+        position: absolute;
+        content:"";
+        border: 2px solid rgba(245, 119, 1, 0.446) ;
+        width: 100%;
+        transition: color .5s ease-in-out;
+        //height: auto;
+    }
+    &:hover {
+        &::after {
+            position: absolute;
+            content:"";
+            border: 2px solid rgba(106, 95, 255, 0.761) ;
+            width: 100%;
+            transition: color .5s ease-in-out;
+        }
+    }
+    &__title {
+        margin-bottom: 35px;
+        font-size: 56px;
+        text-shadow: darkblue 0px 0px 25px;
+    }
+    &__subtitle {
+        color:$tertiary-text;
+        margin-bottom: 20px;
+    }
+    &__paragraph {
+        margin-bottom: 10px;
+    }
+}
+
+.sounds-box {
+    display: flex;
+    flex-flow: wrap;
+    width: 92%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px auto 30px auto;
+    
+    &__keys {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        width: 100%;
+        min-width: 100px;
+        max-width: 150px;
+        height: 90px;
+        //text-overflow: clip;
+        text-align: center;
+        margin: 0 10px 10px;
+        padding: 5px;
+        transition: all .5s;
+        
+        &-typed {
+            border-bottom: 2px solid #{$orange-light}40;
+            margin-bottom: 5px;
+        }
+        
+        &-caption {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+// Active when user type a key programmed
+.playing { // playing
+    transform: scale(1.1);
+    font-weight: 700;
+    background-color: rgba(2, 36, 172, 0.419);
+    border:2px solid $secundary-color;
+    border-radius: 15px;
+    box-shadow: 0 0 10px $secundary-color;
+    
+}
