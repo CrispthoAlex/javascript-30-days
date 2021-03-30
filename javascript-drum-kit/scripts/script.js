@@ -59,9 +59,9 @@ $(function () {
   
     audio.currentTime = 0; // rewind to start. Multiple playing
     // Play the sounds
-    removePlaying(keyPushed);
     audio.play();
-    keyPushed.classList.add('playing')
+    keyPushed.classList.toggle('playing')
+    removePlaying(keyPushed);
   }
 
   // Remove playing class from key not typed
