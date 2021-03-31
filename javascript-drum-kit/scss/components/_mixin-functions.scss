@@ -38,3 +38,16 @@ Useful to conevert px to rem
         transition: 1s;
     }
 }
+
+// hover line, change of color. main section
+@mixin hover-line {
+    &:hover {
+        &::after {
+            position: absolute;
+            content:"";
+            border: 2px solid rgba(106, 95, 255, 0.761) ;
+            width: 99.5%;
+            transition: color .5s ease-in-out;
+        }
+    }
+}

@@ -24,13 +24,13 @@
                 </button>
                 <nav class="navigate js-navigate" role="listbox" aria-label="Navigation Menu">
                     <ul class="navigate-list" role="list">
-                        <li class="navigate-list__item navigate-list__item--hover active" role="itemlist" aria-label="Navigation links">
+                        <li class="navigate-list__item navigate-list__item--hover active" aria-label="Navigation links">
                             <a target="__blank"href="https://www.linkedin.com/in/carmurrain">About me</a>
                         </li>
-                        <li class="navigate-list__item navigate-list__item--hover" role="itemlist" aria-label="Navigation links">
+                        <li class="navigate-list__item navigate-list__item--hover" aria-label="Navigation links">
                             <a target="__blank"href="https://javascript30.com/">30 days JavaScript</a>
                         </li>
-                        <li class="navigate-list__item navigate-list__item--hover" role="itemlist" aria-label="Navigation links">
+                        <li class="navigate-list__item navigate-list__item--hover" aria-label="Navigation links">
                             <a target="__blank"href="https://javascript.info/">Learn JavasScript</a>
                         </li>
                     </ul>
@@ -144,20 +144,22 @@
     </main>
     <footer>
         <div class="main-footer">
-            <div class="whoiam">
-                <p class="whoaim__text"></p>
-                <ul class="whoiam__findme">
-                    <li class="connect">LinkedIn</li>
-                    <li class="connect">GitHub</li>
-                    <li class="connect">Twitter</li>
-                    <!-- <li class="connect"></li>
-                    <li class="connect"></li> -->
-                </ul>
-            </div>
-            <div class="rights">
-                <p>
-                Photo by <a href="https://unsplash.com/@sawyerbengtson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sawyer Bengtson</a> on <a href="https://unsplash.com/s/photos/theatre?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </p>
+            <div class="wrapper">
+                <div class="main-footer__box">
+                    <div class="whoiam">
+                        <p class="whoiam__text">I'm Crispthofer, nice to meet you</p>
+                        <ul class="whoiam__findme">
+                            <li title="www.linkedin.com" class="connect"><a target="_blank" href="https://linkedin.com/in/carmurrain"><img src="./images/linkedin.svg" alt="LinkedIn Logo"></a></li>
+                            <li title="www.github.com" class="connect"><a target="_blank" href="https://github.com/crispthoalex/"><img src="./images/github.svg" alt="GitHub Logo"></a></li>
+                            <li title="www.twitter.com" class="connect"><a target="_blank" href="https://twitter.com/crispthoalex/"><img src="./images/twitter.svg" alt="Twitter Logo"></a></li>
+                        </ul>
+                    </div>
+                    <div class="rights">
+                        <p>
+                        Photo by <a href="https://unsplash.com/@sawyerbengtson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sawyer Bengtson</a> on <a href="https://unsplash.com/s/photos/theatre?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                        </p>
+                    </div>
+                </div>    
             </div>
         </div>
     </footer>

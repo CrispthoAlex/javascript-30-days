@@ -21,19 +21,13 @@
         position: absolute;
         content:"";
         border: 2px solid rgba(245, 119, 1, 0.446) ;
-        width: 100%;
+        width: 99.5%;
         transition: color .5s ease-in-out;
         //height: auto;
     }
-    &:hover {
-        &::after {
-            position: absolute;
-            content:"";
-            border: 2px solid rgba(106, 95, 255, 0.761) ;
-            width: 100%;
-            transition: color .5s ease-in-out;
-        }
-    }
+
+    @include hover-line ;
+
     &__title {
         margin-bottom: 35px;
         font-size: 56px;
@@ -64,13 +58,16 @@
         min-width: 100px;
         max-width: 150px;
         height: 90px;
-        //text-overflow: clip;
+        border:2px solid $orange-dark;
+        border-radius: 15px;
+        background-color: #00000065;
         text-align: center;
         margin: 0 10px 10px;
         padding: 5px;
         transition: all .5s;
         
         &-typed {
+            position: relative;
             border-bottom: 2px solid #{$orange-light}40;
             margin-bottom: 5px;
         }

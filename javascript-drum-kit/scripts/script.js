@@ -46,36 +46,35 @@ $(function () {
       this.classList.add('active');
     });
   });
-
+  
+  // Get keys to removed the playing class
+  const keysPlaying = document.querySelectorAll('.sounds-box__keys')
+  
   // Play when a key is typed
   function playingSounds (event) {
+    
+    //Remove last element; playing sounds
+    keysPlaying.forEach(singlekey => {singlekey.classList.remove('playing')});
+    
     // Get the key typed
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
     const keyPushed = document.querySelector(`.sounds-box__keys[data-key="${event.keyCode}"]`);
     
-    console.log(keyPushed);
     if (!audio || !keyPushed)
       return; // Stop, if key is not programmed
-  
+    
     audio.currentTime = 0; // rewind to start. Multiple playing
+    
     // Play the sounds
     audio.play();
-    keyPushed.classList.toggle('playing')
-    removePlaying(keyPushed);
+    keyPushed.classList.add('playing')
+    //removePlaying(keyPushed);
   }
 
-  // Remove playing class from key not typed
-  function removePlaying (e) {
-    console.log(e);
-    // if (e.propertyName !== 'transform')
-    //   return; // Skip it  if it's not a transform
-    if (this.contains.classList('playing'))
-      this.classList.remove('playing');
-  }
-  
-  // Get keys to removed the playing class
-  const keysPlaying = document.querySelectorAll('.sounds-box__keys')
-  keysPlaying.forEach(keysPlaying => keysPlaying.addEventListener('onanimationend', removePlaying));
+  keysPlaying.forEach(keycode => {
+    keycode.addEventListener('transitionend', playingSounds);
+  });
+
   // Activa key play
   window.addEventListener('keydown', playingSounds);
 
