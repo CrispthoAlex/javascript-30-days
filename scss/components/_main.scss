@@ -39,14 +39,15 @@
         @include responsive-page(mdtop) { font-size: 56px; }
     }
     &__subtitle {
-        font-size: 28px;
+        font-size: 24px;
         color:$secundary-text;
         margin-bottom: 20px;
-        @include responsive-page(mdtop) { font-size: 56px; }
+        @include responsive-page(mdtop) { font-size: 36px; }
 
     }
     &__paragraph {
         margin-bottom: 10px;
+        font-size: 16px;
         @include responsive-page(mdtop) { font-size: 20px; }
     }
 }
