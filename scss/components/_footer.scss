@@ -1,0 +1,43 @@
+/*FOOTER SECTION*/
+
+.main-footer {
+    width: 100%;
+    padding-top: 30px;
+    background-color: $background-orange;
+    border-top: 2px solid $secundary-color;
+    
+    &__box {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+.whoiam {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto ;
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__findme {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        max-width: 700px;
+        // .connect {
+        //     margin: 0 20px 0 0;
+        // }
+    }
+}
+
+.rights {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px 0;
+}

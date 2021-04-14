@@ -1,0 +1,42 @@
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: no-repeat url('../images/spiral-rainbow.gif');
+  background-size: cover;
+}
+body {
+  background-color: #ffffffe9;
+}
+body, html {
+  font-family: $font, $family;
+  font-size: $browser-context;
+  color: $primary-color;
+}
+
+a { 
+  &, &:link {
+    color:currentcolor;
+    text-decoration: none;
+  }
+  &:focus { border: none; }
+}
+
+button:focus {
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin:0 auto;
+}
+
